@@ -1,0 +1,7 @@
+html {
+  background: url("http://res.cloudinary.com/recklessmoxie/image/upload/q_100/v1477075043/Gaussian_blur_gradient_1920x1200.jpg_jbip0p.jpg") no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
