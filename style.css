@@ -1,7 +1,19 @@
-html {
+body {
   background: url("http://res.cloudinary.com/recklessmoxie/image/upload/q_100/v1477075043/Gaussian_blur_gradient_1920x1200.jpg_jbip0p.jpg") no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.calculator {
+  height: 410px;
+  width: 300px;
+  background-color: rgba(242, 242, 242, 0.12);
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.15), inset -1px -8px 15px 1px rgba(255, 255, 255, 0.15);
 }
