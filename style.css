@@ -1,5 +1,5 @@
 body {
-  background: url("http://res.cloudinary.com/recklessmoxie/image/upload/q_100/v1477075043/Gaussian_blur_gradient_1920x1200.jpg_jbip0p.jpg") no-repeat fixed;
+  background: url("http://m.rgbimg.com/cache1y4srK/users/x/xy/xymonau/600/oZxUMGa.jpg") repeat bottom fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,11 +9,22 @@ body {
 .calculator {
   height: 410px;
   width: 300px;
-  background-color: rgba(242, 242, 242, 0.12);
+  background-color: rgba(200, 243, 243, .85);
   margin-top: 20%;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(56, 66, 66, .50);
   border-radius: 20px;
-  box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.15), inset -1px -8px 15px 1px rgba(255, 255, 255, 0.15);
+   box-shadow: 7px 10px 34px 1px rgba(56, 66, 66, .30), inset -1px -6px 12px 0.1px rgba(64, 89, 89, .85);
+}
+
+.calculator-display {
+  margin-top: 25px;
+  width: 85%;
+  height: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid rgba(189, 208, 207, 1);
+  border-radius: 8px;
+  background-color: rgba(210, 223, 222, 1);
 }
