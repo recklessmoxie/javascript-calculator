@@ -4,6 +4,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Inconsolata', monospace;
 }
 
 .calculator {
@@ -18,7 +19,7 @@ body {
    box-shadow: 7px 10px 34px 1px rgba(56, 66, 66, .30), inset -1px -6px 12px 0.1px rgba(64, 89, 89, .85);
 }
 
-.calculator-display {
+#calculator-display {
   margin-top: 25px;
   width: 85%;
   height: 55px;
@@ -27,6 +28,11 @@ body {
   border: 2px solid rgba(189, 208, 207, 1);
   border-radius: 8px;
   background-color: rgba(210, 223, 222, 1);
+}
+
+#user-input {
+  margin-right: 10px;
+  font-size: 2.4rem;
 }
 
 .calc-buttons {
