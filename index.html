@@ -11,12 +11,16 @@
   <meta name="twitter:image:alt" content="Screen shot of the Javascript Calculator Project">
   <title>Javascript Calculator Project</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <div class="container">
     <div class="calculator">
-      <div class="calculator-display">
+      <div id="calculator-display" class="text-xs-right">
+        <div id="user-input">
+          <p id="result">0</p>
+        </div>
       </div>
       <div class="calc-buttons">
         <div class="row">
@@ -49,7 +53,7 @@
 
         <button class="equal" value="=">=</button>
 
-     </div>
+      </div>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
