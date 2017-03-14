@@ -1,51 +1,53 @@
-$(document).ready(function () {
-
-  var num = "";
-  var numTwo = "";
-  var operator = "";
-  var total = $("#result");
-  var decimalAdded = false;
-
-  function clear() {
-    num = "";
-    numTwo = "";
-    operator = "";
-    $("#result").text("0");
-  }
+var keys = document.querySelectorAll('.calculator button ');
+var operators = ['+', '-', 'x', '÷'];
+var decimalAdded = false;
 
 
-  $("button").click(function () {
-    if (this.id === "clear") {
-      clear();
+for (var i = 0; i < keys.length; i++) {
+  keys[i].onclick = function (e) {
+    var input = document.querySelector('.input');
+    var inputVal = input.innerHTML;
+    var btnVal = this.getAttribute("data-value");
 
+    if (btnVal == 'C') {
+      input.innerHTML = '';
+      decimalAdded = false;
+    } else if (btnVal == '=') {
+      var equation = inputVal;
+      var lastChar = equation[equation.length - 1];
+
+      equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
+
+      if (operators.indexOf(lastChar) > -1 || lastChar == '.')
+        equation = equation.replace(/.$/, '');
+
+      if (equation)
+        input.innerHTML = eval(equation);
+
+      decimalAdded = false;
+    } else if (operators.indexOf(btnVal) > -1) {
+      var lastChar = inputVal[inputVal.length - 1];
+
+      if (inputVal != '' && operators.indexOf(lastChar) == -1)
+        input.innerHTML += btnVal;
+
+      else if (inputVal == '' && btnVal == '-')
+        input.innerHTML += btnVal;
+
+      if (operators.indexOf(lastChar) > -1 && inputVal.length > 1) {
+        input.innerHTML = inputVal.replace(/.$/, btnVal);
+      }
+
+      decimalAdded = false;
+    } else if (btnVal == '.') {
+      if (!decimalAdded) {
+        input.innerHTML += btnVal;
+        decimalAdded = true;
+      }
     } else {
-      num += $(this).text();
-      $("#result").text(num);
+      input.innerHTML += btnVal;
     }
-  })
 
-
-  $(".yellow").not("#total").click(function () {
-    operator = $(this).text();
-    numTwo = num;
-    num = "";
-  });
-
-  $("#total").click(function () {
-
-    if (operator === "+") {
-      num = (parseFloat(numTwo) + parseFloat(num));
-    } else if (operator === "-") {
-      num = (parseFloat(numTwo) - parseFloat(num));
-    } else if (operator === "*") {
-      num = (parseFloat(numTwo) * parseFloat(num));
-    } else if (operator === "/") {
-      num = (parseFloat(numTwo) / parseFloat(num));
-    }
-    total.text(num);
-    num = "";
-    numTwo = "";
-
-  })
-
-});
+    e.preventDefault();
+  }
+}
