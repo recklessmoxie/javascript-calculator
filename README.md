@@ -23,4 +23,4 @@
   </ul>
 
 <p>Please visit the live project by clicking the image below</p>
-<a href="#"><img src="#"></a>
+<a href="http://www.recklessmoxie.com/javascript-calculator"><img src="js-calc.png"></a>
